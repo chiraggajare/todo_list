@@ -6,7 +6,7 @@ $pass = "";
 $db_name = "TODO-LIST";
 
 try{
-    $conn = new PDO("mysqlddd:host=$sName; dbname=$db_name",
+    $conn = new PDO("mysql:host=$sName; dbname=$db_name",
                     $uName,$pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "connected!";
