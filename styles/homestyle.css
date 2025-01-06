@@ -132,7 +132,7 @@ form {
   width: 20px;
   height: 20px;
   font-family: sans-serif;
-  color: rgb(139, 97, 93);
+  color: black;
   text-decoration: none;
   text-align: right;
   padding: 0px 5px 8px 0px;
@@ -160,4 +160,8 @@ form {
   font-size: 16px;
   text-align: center;
   color: #cccc;
+}
+
+span{
+    color: black;
 }
