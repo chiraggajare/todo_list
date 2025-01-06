@@ -16,8 +16,13 @@ require 'db_conn.php';
     <div class="main-section">
         <div class="add-section">
             <form action="app/add.php" method="POST" autocomplete="off">
-                <input type="text" name="title" placeholder="Add your tasks here">
-                <button type="submit">ADD</button>
+                <?php if(isset($_GET['mess']) && $_GET['mess'] == 'error') { ?>
+                    <input type="text" name="title" placeholder="This field is required">
+                    <button type="submit">ADD</button>
+                <?php } else{ ?>
+                    <input type="text" name="title" placeholder="What do you need to do?">
+                    <button type="submit">ADD</button>
+                <?php } ?>
             </form>
         </div>
 
@@ -25,7 +30,7 @@ require 'db_conn.php';
         $todos = $conn->query("SELECT * FROM todos ORDER BY id DESC")
         ?>
 
-        <?php if ($todos->rowCount() <= 0) { ?>
+        <?php if($todos->rowCount() <= 0) { ?>
 
             <div class="show-todo-section">
                 <div class="todo-item">
@@ -46,11 +51,11 @@ require 'db_conn.php';
                     <?php if ($todo['checked']) { ?>
                         <input type="checkbox" class="check-box" checked />
                         <h2 class="checked"><?php echo $todo['task'] ?></h2>
-                        
-                    <?php } else{ ?>
-                        <input type="checkbox" class="check-box"/>
+
+                    <?php } else { ?>
+                        <input type="checkbox" class="check-box" />
                         <h2><?php echo $todo['task'] ?></h2>
-                        
+
                     <?php } ?>
 
                     <br>
