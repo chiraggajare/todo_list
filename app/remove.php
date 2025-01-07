@@ -1,14 +1,13 @@
 <?php
 
-if(isset($_POST['title'])){
+if(isset($_POST['id'])){
     require '../db_conn.php';
 
     $id = $_POST['id'];
 
-    if(empty($title)){
+    if(empty($id)){
         echo 0;
     }else{
-        $now = date("Y-m-d h:i:sa");
         $stmt = $conn->prepare("DELETE FROM todos WHERE id=?");
         $res = $stmt->execute([$id]);
 
@@ -22,7 +21,6 @@ if(isset($_POST['title'])){
 }
 else{
     header("Location: ../index.php?mess=error");
-
 }
 
 ?>

@@ -8,9 +8,8 @@ if(isset($_POST['title'])){
     if(empty($title)){
         header("Location: ../index.php?mess=error");
     }else{
-        $now = date("Y-m-d h:i:sa");
-        $stmt = $conn->prepare("INSERT INTO todos(task, dueDate) VALUE(?,?)");
-        $res = $stmt->execute([$title, $now]);
+        $stmt = $conn->prepare("INSERT INTO todos(task) VALUE(?)");
+        $res = $stmt->execute([$title]);
 
         if($res){
             header("Location: ../index.php?mess=success");
