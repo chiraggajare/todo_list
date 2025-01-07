@@ -105,7 +105,6 @@ form {
   border-radius: 5px;
   background: #d071ff66;
   backdrop-filter: blur(10px);
-  color: black;
 }
 
 .todo-item h2 {

@@ -36,7 +36,7 @@ require 'db_conn.php';
                 <div class="todo-item">
                     <div class="empty">
                         <h2>Hey there! Add some tasks to get started!</h2>
-                        <div class="gif">...</div>
+                        <img class="gif" src="images/loading.gif" style="border-radius:50%; width:200px;">
                     </div>
                 </div>
             </div>
