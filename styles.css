@@ -1,15 +1,15 @@
 body {
-  background: #ad5389; /* fallback for old browsers */
+  background: #ad5389;
   background: -webkit-linear-gradient(
     to right,
     #3c1053,
     #ad5389
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
-    #3c1053,
+    #3c1053,    
     #ad5389
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
 
   font-family: sans-serif;
 
@@ -23,6 +23,7 @@ body {
 
 form {
   margin: 10px;
+  padding: 20px;
 }
 
 .main-section {
@@ -39,7 +40,6 @@ form {
   background: #d071ff66;
   backdrop-filter: blur(10px);
   margin: 0px auto;
-  padding: 30px;
   border-radius: 5px;
 }
 
@@ -51,7 +51,7 @@ form {
   border: 2px solid #ccc;
   font-size: 16px;
   border-radius: 5px;
-  padding: 0px 5px;
+  padding: 10px 5px;
 }
 
 .add-section button {
@@ -95,18 +95,16 @@ form {
 .show-todo-section {
   width: 100%;
   margin: 30px auto;
-  padding: 10px;
   border-radius: 5px;
-  background: #d071ff66;
-  backdrop-filter: blur(10px);
 }
 
 .todo-item {
   width: 100%;
-  margin: 10px auto;
-  padding: 20px 10px;
+  margin: 20px auto;
+  padding: 20px 20px;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0);
+  background: #d071ff66;
+  backdrop-filter: blur(10px);
   color: black;
 }
 
