@@ -14,13 +14,14 @@ require 'db_conn.php';
 
 <body>
     <div class="main-section">
+        <h1 style="text-align: center; color: white; font-size: 50px; font-style: italic;">Quick Do!</h1>
         <div class="add-section">
             <form action="app/add.php" method="POST" autocomplete="off">
                 <?php if(isset($_GET['mess']) && $_GET['mess'] == 'error') { ?>
-                    <input type="text" name="title" placeholder="This field is required">
+                    <input type="text" name="title" placeholder="Please enter some text..">
                     <button type="submit">ADD</button>
                 <?php } else{ ?>
-                    <input type="text" name="title" placeholder="What do you need to do?">
+                    <input type="text" name="title" placeholder="Add a new task">
                     <button type="submit">ADD</button>
                 <?php } ?>
             </form>
